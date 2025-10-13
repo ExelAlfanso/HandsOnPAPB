@@ -22,7 +22,7 @@ fun RootNavGraph(navController: NavHostController) {
             })
         }
         composable(Routes.HOME) {
-            HomeScreen()
+            HomeScreen(navController = navController) // ✅ tambahin ini
         }
     }
 }
