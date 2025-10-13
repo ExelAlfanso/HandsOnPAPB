@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.handsonpapb.ui.screens.HomeScreen
+import com.example.handsonpapb.ui.screens.SettingsScreen
 import com.example.handsonpapb.ui.screens.SplashScreen
 
 @Composable
@@ -22,7 +23,10 @@ fun RootNavGraph(navController: NavHostController) {
             })
         }
         composable(Routes.HOME) {
-            HomeScreen(navController = navController) // ✅ tambahin ini
+            HomeScreen(navController = navController)
+        }
+        composable(Routes.SETTINGS) {
+            SettingsScreen()
         }
     }
 }
