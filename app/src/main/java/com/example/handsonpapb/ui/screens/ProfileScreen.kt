@@ -1,4 +1,4 @@
-package com.example.handsonpapb
+package com.example.handsonpapb.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

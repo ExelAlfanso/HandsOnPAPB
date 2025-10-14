@@ -4,25 +4,32 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.composenavigationapp.ui.navigation.MainScaffold
+import com.example.composenavigationapp.ui.navigation.Routes
 import com.example.handsonpapb.ui.screens.HomeScreen
 import com.example.handsonpapb.ui.screens.SplashScreen
 
 @Composable
-fun RootNavGraph(navController: NavHostController) {
+fun RootNavGraph(
+    navController: NavHostController
+) {
     NavHost(
         navController = navController,
         startDestination = Routes.SPLASH
     ) {
+        // Splash tetap sama
         composable(Routes.SPLASH) {
             SplashScreen(onFinished = {
-                navController.navigate(Routes.HOME) {
+                navController.navigate(Routes.MAIN_GRAPH) {
                     popUpTo(Routes.SPLASH) { inclusive = true }
                     launchSingleTop = true
                 }
             })
         }
-        composable(Routes.HOME) {
-            HomeScreen(navController = navController) // ✅ tambahin ini
+        // Ganti: sebelumnya 'navigation(route = MAIN_GRAPH) { ... }'
+        // Sekarang: satu composable yang menampilkan MainScaffold
+        composable(Routes.MAIN_GRAPH) {
+            MainScaffold() // kita buat di langkah 3.2
         }
     }
 }
