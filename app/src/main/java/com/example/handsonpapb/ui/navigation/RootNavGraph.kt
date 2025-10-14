@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.example.composenavigationapp.ui.navigation.MainScaffold
 import com.example.composenavigationapp.ui.navigation.Routes
 import com.example.handsonpapb.ui.screens.HomeScreen
+import com.example.handsonpapb.ui.screens.SettingsScreen
 import com.example.handsonpapb.ui.screens.SplashScreen
 
 @Composable
