@@ -17,6 +17,7 @@ import androidx.navigation.compose.*
 import com.example.HandsOnPAPB.ui.navigation.DetailScreen
 import com.example.handsonpapb.ui.screens.ProfileScreen
 import com.example.handsonpapb.ui.screens.HomeScreen
+import com.example.handsonpapb.ui.screens.SettingsScreen
 import kotlinx.coroutines.launch
 // --- BottomNav items ---
 sealed class BottomItem(val route: String, val label: String, val icon:
@@ -149,7 +150,7 @@ private fun MainNavHost(navController: NavHostController) {
             DetailScreen(navController, id)
         }
         composable(Routes.PROFILE) { ProfileScreen() }
-//        composable(Routes.SETTINGS) { SettingsScreen() }
-//        composable(Routes.ADD) { AddScreen(navController) }
+        composable(Routes.SETTINGS) { SettingsScreen() }
+        composable(Routes.ADD) { AddScreen(navController) }
     }
 }
