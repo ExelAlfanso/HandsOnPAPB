@@ -32,7 +32,7 @@ androidx.compose.ui.graphics.vector.ImageVector) {
         Icons.Filled.Person)
     data object Settings : BottomItem(Routes.SETTINGS, "Settings",
         Icons.Filled.Settings)
-    data object Notification : BottomItem(Routes.SETTINGS, "Settings",
+    data object Notification : BottomItem(Routes.NOTIFICATION, "Notifications",
         Icons.Filled.Notifications)
 }
 private val bottomItems = listOf(BottomItem.Home, BottomItem.Profile,
