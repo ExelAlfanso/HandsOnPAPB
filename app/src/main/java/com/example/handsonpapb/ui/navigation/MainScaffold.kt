@@ -16,7 +16,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
-import com.example.HandsOnPAPB.ui.navigation.DetailScreen
+import com.example.handsonpapb.ui.navigation.DetailScreen
 import com.example.handsonpapb.ui.screens.ProfileScreen
 import com.example.handsonpapb.ui.screens.HomeScreen
 import com.example.handsonpapb.ui.screens.NotificationItem
