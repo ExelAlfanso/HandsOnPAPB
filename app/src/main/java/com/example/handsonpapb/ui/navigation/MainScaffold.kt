@@ -1,4 +1,5 @@
-package com.example.composenavigationapp.ui.navigation
+package com.example.handsonpapb.ui.navigation
+import AddScreen
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -9,6 +10,7 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -17,6 +19,8 @@ import androidx.navigation.compose.*
 import com.example.HandsOnPAPB.ui.navigation.DetailScreen
 import com.example.handsonpapb.ui.screens.ProfileScreen
 import com.example.handsonpapb.ui.screens.HomeScreen
+import com.example.handsonpapb.ui.screens.NotificationItem
+import com.example.handsonpapb.ui.screens.NotificationScreen
 import com.example.handsonpapb.ui.screens.SettingsScreen
 import kotlinx.coroutines.launch
 // --- BottomNav items ---
@@ -139,6 +143,11 @@ private fun AppDrawer(onNavigate: (String) -> Unit) {
             selected = false,
             onClick = { onNavigate(Routes.SETTINGS) }
         )
+        NavigationDrawerItem(
+            label = { Text("Notification") },
+            selected = false,
+            onClick = { onNavigate(Routes.NOTIFICATION) }
+        )
     }
 }
 @Composable
@@ -152,5 +161,12 @@ private fun MainNavHost(navController: NavHostController) {
         composable(Routes.PROFILE) { ProfileScreen() }
         composable(Routes.SETTINGS) { SettingsScreen() }
         composable(Routes.ADD) { AddScreen(navController) }
+        composable(Routes.NOTIFICATION) { NotificationScreen(
+            notifications = listOf(
+                NotificationItem("New Message", "You have a new message from Alex", "2m ago"),
+                NotificationItem("System Update", "Your system update completed successfully", "1h ago"),
+                NotificationItem("Reminder", "Meeting with team at 3 PM", "3h ago")
+            )
+        ) }
     }
 }

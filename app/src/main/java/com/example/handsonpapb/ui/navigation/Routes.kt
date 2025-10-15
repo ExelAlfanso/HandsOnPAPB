@@ -1,4 +1,4 @@
-package com.example.composenavigationapp.ui.navigation
+package com.example.handsonpapb.ui.navigation
 object Routes {
     const val SPLASH = "splash"
     const val HOME = "home"
@@ -6,5 +6,7 @@ object Routes {
     const val PROFILE = "profile"
     const val SETTINGS = "settings"
     const val ADD = "add"
+    const val NOTIFICATION = "notification"
+
     const val MAIN_GRAPH = "main_graph"
 }
