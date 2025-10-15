@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -31,9 +32,11 @@ androidx.compose.ui.graphics.vector.ImageVector) {
         Icons.Filled.Person)
     data object Settings : BottomItem(Routes.SETTINGS, "Settings",
         Icons.Filled.Settings)
+    data object Notification : BottomItem(Routes.SETTINGS, "Settings",
+        Icons.Filled.Notifications)
 }
 private val bottomItems = listOf(BottomItem.Home, BottomItem.Profile,
-    BottomItem.Settings)
+    BottomItem.Settings,BottomItem.Notification)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScaffold() {
